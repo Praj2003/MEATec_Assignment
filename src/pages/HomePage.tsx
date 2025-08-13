@@ -27,7 +27,7 @@ const HomePage = () => {
           </p>
 
           <div className="flex items-center justify-center gap-7 mt-9">
-            <a href={"/ai"}>
+            <a href={"/taskManager"}>
               <motion.button
                 whileHover={{
                   scale: 1.1,
@@ -40,7 +40,7 @@ const HomePage = () => {
               </motion.button>
             </a>
 
-            <a href={"/sign-up"}>
+            <a href={"/loginForm"}>
               <motion.button
                 whileHover={{
                   scale: 1.1,
@@ -49,7 +49,7 @@ const HomePage = () => {
                 }}
                 className="px-3 py-2 bg-black text-white font-bold rounded-lg cursor-pointer"
               >
-                Sign Up
+                Login
               </motion.button>
             </a>
           </div>

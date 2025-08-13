@@ -19,12 +19,14 @@ const Footer = () => {
         >
           About Us
         </motion.button>
+        <a href="/taskManager" >
         <motion.button
           whileHover={{ scale: 1.1, backgroundColor: "teal", color: "white" }}
           className="text-white bg-black px-3 py-2 rounded-lg cursor-pointer"
         >
           Start Creating Tasks
         </motion.button>
+        </a>
       </div>
 
       <div className="flex flex-col items-center justify-center gap-5 text-white font-bold">

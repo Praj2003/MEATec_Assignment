@@ -25,21 +25,48 @@ function saveTasks(tasks: Task[]): void {
   localStorage.setItem(TASKS_KEY, JSON.stringify(tasks));
 }
 
+function saveSession(session: Session) {
+  localStorage.setItem(SESSION_KEY, JSON.stringify(session));
+}
+
+
+const STATIC_USER = {
+  username: "test",
+  password: "test123",
+};
+
+const FAKE_JWT_TOKEN = "fake-jwt-token-1234567890";
+
 export const handlers = [
-
   http.post("/login", async ({ request }) => {
-    const { username } = (await request.json()) as { username: string };
-    const session: Session = { token: "fake-jwt", username };
-    sessionStorage.setItem(SESSION_KEY, JSON.stringify(session));
-    return HttpResponse.json(session);
-  }),
+    const { username, password } = (await request.json()) as {
+      username: string;
+      password: string;
+    };
 
+    if (
+      username === STATIC_USER.username &&
+      password === STATIC_USER.password
+    ) {
+      const session: Session = {
+        token: FAKE_JWT_TOKEN,
+        username,
+      };
+      saveSession(session);
+
+      return HttpResponse.json(session, { status: 200 });
+    } else {
+      return HttpResponse.json(
+        { error: "Invalid username or password" },
+        { status: 401 }
+      );
+    }
+  }),
 
   http.get("/tasks", () => {
     return HttpResponse.json(getStoredTasks());
   }),
 
- 
   http.post("/tasks", async ({ request }) => {
     const newTask = (await request.json()) as Omit<Task, "id">;
     const tasks = getStoredTasks();
@@ -48,7 +75,6 @@ export const handlers = [
     saveTasks(tasks);
     return HttpResponse.json(taskWithId, { status: 201 });
   }),
-
 
   http.put("/tasks/:id", async ({ request, params }) => {
     const updatedTask = (await request.json()) as Partial<Task>;
@@ -60,7 +86,6 @@ export const handlers = [
     return HttpResponse.json({ success: true });
   }),
 
-  
   http.delete("/tasks/:id", ({ params }) => {
     let tasks = getStoredTasks();
     tasks = tasks.filter((task) => task.id !== Number(params.id));
