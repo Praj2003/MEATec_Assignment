@@ -25,6 +25,7 @@ API Mocking: MSW
 
 Docker - Containerizing Application
 
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
@@ -66,7 +67,10 @@ https://github.com/user-attachments/assets/a04060f3-a479-4a2e-bd2d-c5a9a9682bb6
 ### MSW Screenshot
 <img width="654" height="677" alt="Screenshot 2025-08-13 at 2 04 13 PM" src="https://github.com/user-attachments/assets/a1165c76-ce43-4dcd-a64d-a498d54d7f6b" />
 
+# Username and Password for login
 
+username: test
+password: test123
 
 
 ## Expanding the ESLint configuration
