@@ -35,8 +35,32 @@ Currently, two official plugins are available:
 ## Core Features and UI
 ### Home Page
 
-
 https://github.com/user-attachments/assets/05673727-4630-4c29-bedf-04615a19b042
+
+### Task Manager (CRUD) Operation
+
+
+https://github.com/user-attachments/assets/b2602e9f-58cf-4406-b86f-7070817f647d
+
+
+https://github.com/user-attachments/assets/5921188b-5bb0-40fb-975d-d9a1265ff8ef
+
+
+#### Mobile Friendly
+
+
+https://github.com/user-attachments/assets/104d3fff-4df6-4300-89f6-cccbd8207e0a
+
+
+
+https://github.com/user-attachments/assets/0a7e2c6e-163c-4d08-8b33-33812811ad1f
+
+
+### Login Functionality and Context API Usage (For Passing Session and IsLoggedIn or not)
+
+
+https://github.com/user-attachments/assets/a04060f3-a479-4a2e-bd2d-c5a9a9682bb6
+
 
 
 
