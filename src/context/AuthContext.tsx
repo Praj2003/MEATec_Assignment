@@ -28,12 +28,12 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
         body: JSON.stringify({ username, password }),
       });
 
-      // Try to parse JSON safely
+      
       let data: any = null;
       try {
         data = await res.json();
       } catch {
-        data = null; // No JSON body or invalid JSON
+        data = null; 
       }
 
       if (!res.ok) {
@@ -41,7 +41,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
         return;
       }
 
-      // Save session and set state
+
       localStorage.setItem(SESSION_KEY, JSON.stringify(data));
       setIsLoggedIn(true);
     } catch (err) {

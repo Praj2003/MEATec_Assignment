@@ -20,7 +20,7 @@ export default function LoginForm() {
 
   useEffect(() => {
     if (isLoggedIn) {
-      navigate("/"); // home page
+      navigate("/"); 
     }
   }, [isLoggedIn, navigate]);
 

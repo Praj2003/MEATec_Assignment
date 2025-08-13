@@ -122,7 +122,7 @@ export const TaskList = ({ tasks }: TaskListProps) => {
 
   return (
     <div className="w-full max-w-4xl mx-auto p-4 space-y-8">
-      {/* Active Tasks */}
+  
       <div>
         <h3 className="text-lg text-center font-semibold mb-4">
           📌 Active Tasks
@@ -136,7 +136,7 @@ export const TaskList = ({ tasks }: TaskListProps) => {
         </div>
       </div>
 
-      {/* Completed Tasks */}
+   
       <div>
         <h3 className="text-lg text-center font-semibold mb-4">
           ✅ Completed Tasks
