@@ -25,6 +25,11 @@ API Mocking: MSW
 
 Docker - Containerizing Application
 
+## Install Dependecies
+npm install
+## Run the development server
+npm run dev
+
 
 # React + TypeScript + Vite
 
