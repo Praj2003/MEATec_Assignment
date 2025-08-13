@@ -1,3 +1,28 @@
+## TaskNest — Task Manager App
+Overview
+A modern task manager application built with React, TypeScript, and Vite.
+It allows users to add, update, delete, and fetch tasks with a clean and responsive UI.
+
+Features
+Vite + React.js + TypeScript for fast and type-safe development
+
+Tailwind CSS + shadcn/ui for responsive and modern styling
+
+CRUD operations: add, edit, delete, and view tasks
+
+Context API for managing authentication state across the app
+
+MSW (Mock Service Worker) for simulating backend APIs in development
+
+Tech Stack
+Frontend: React.js, TypeScript, Vite
+
+Styling: Tailwind CSS, shadcn/ui
+
+State Management: Context API
+
+API Mocking: MSW
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

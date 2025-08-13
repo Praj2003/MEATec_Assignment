@@ -1,9 +1,7 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { motion } from "motion/react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useAuth } from "@/context/AuthContext";
-
-const SESSION_KEY = "session";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -87,7 +85,7 @@ const Navbar = () => {
           </a>
         </li>
 
-         <li>
+        <li>
           <a href="/">
             <motion.div
               whileHover={{
@@ -104,12 +102,18 @@ const Navbar = () => {
       </ul>
       <div>
         {!isLoggedIn ? (
-          <motion.button
-            whileHover={{ scale: 1.1, backgroundColor: "red", color: "white" }}
-            className="hidden lg:inline-block px-4 py-2 bg-black text-white rounded-lg shadow-2xl mr-4 cursor-pointer"
-          >
-            Login
-          </motion.button>
+          <a href="/loginForm">
+            <motion.button
+              whileHover={{
+                scale: 1.1,
+                backgroundColor: "red",
+                color: "white",
+              }}
+              className="hidden lg:inline-block px-4 py-2 bg-black text-white rounded-lg shadow-2xl mr-4 cursor-pointer"
+            >
+              Login
+            </motion.button>
+          </a>
         ) : (
           <motion.button
             onClick={logout}
